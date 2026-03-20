@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТЕМКА — магазин для Дашки</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- Хедер -->
+    <header class="header">
+      <div class="header-logo">
+        <img src="images/logo.png" alt="ТЕМКА" class="header-logo-img">
+      </div>
+      <div class="header-icons">
+        <div class="header-icon">
+          <img src="images/icon-best.png" alt="">
+          <span>best<br>items</span>
+        </div>
+        <div class="header-icon">
+          <img src="images/icon-shipping.png" alt="" class="icon-shipping">
+          <span>1 second<br>shipping</span>
+        </div>
+        <div class="header-icon">
+          <img src="images/icon-special.png" alt="" class="icon-special">
+          <span>special<br>for Dasha</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Категории -->
+    <nav class="categories">
+      <a href="#" class="category active">Для Дашки</a>
+      <a href="#" class="category disabled">Еда (недоступно)</a>
+      <a href="#" class="category disabled">Техника (недоступно)</a>
+    </nav>
+
+    <!-- Товары -->
+    <div class="products">
+
+      <!-- Ряд 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/mfr.png" alt="МФР">
+        </div>
+        <div class="product-info">
+          <p class="product-title">Спортивные люди оценят, длинн...</p>
+          <p class="product-status orange">ОСТАЛОСЬ: 1 ШТ</p>
+          <div class="product-rating">
+            <div class="stars">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+            </div>
+            <span class="rating-count">17</span>
+          </div>
+          <div class="product-bottom">
+            <span class="product-tag">экстра экономия 100%</span>
+            <button class="cart-btn"><img src="images/cart.png" alt="В корзину"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/dishes.png" alt="Посуда">
+        </div>
+        <div class="product-info">
+          <p class="product-title">Разбить посуду и послать всё в пи...</p>
+          <p class="product-status"><span class="orange">Бестселлер</span> в антистресс товарах</p>
+          <div class="product-rating">
+            <div class="stars">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+            </div>
+            <span class="rating-count">2</span>
+          </div>
+          <div class="product-bottom">
+            <span class="product-tag">самый необычный это</span>
+            <button class="cart-btn"><img src="images/cart.png" alt="В корзину"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ряд 2 -->
+      <div class="product-card">
+        <div class="product-image tall">
+          <img src="images/vocal.png" alt="Вокал">
+        </div>
+        <div class="product-info">
+          <p class="product-title">Скоро Linkin Park будет жалеть о...</p>
+          <p class="product-status"><span class="orange">Бестселлер</span> в хобби для крутых</p>
+          <div class="product-rating">
+            <div class="stars">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+            </div>
+            <span class="rating-count">358</span>
+          </div>
+          <div class="product-bottom">
+            <span class="product-tag">в подарок от близких</span>
+            <button class="cart-btn"><img src="images/cart.png" alt="В корзину"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image tall">
+          <img src="images/fireplace.png" alt="Камин">
+        </div>
+        <div class="product-info">
+          <p class="product-title">ДАННЫЙ ТОВАР СОЗДАН И(ИЛИ)...</p>
+          <p class="product-status orange">ОСТАЛОСЬ: 12 ШТ</p>
+          <div class="product-rating">
+            <div class="stars">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+            </div>
+            <span class="rating-count">51</span>
+          </div>
+          <div class="product-bottom">
+            <span class="product-tag">100% на добрые дела</span>
+            <button class="cart-btn"><img src="images/cart.png" alt="В корзину"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ряд 3 -->
+      <div class="product-card">
+        <div class="product-image extra-tall">
+          <img src="images/puppet.png" alt="Пупенка">
+        </div>
+        <div class="product-info">
+          <p class="product-title">Пупенка, пупенка, глупая картонка</p>
+          <p class="product-status orange">ОСТАЛОСЬ: 1 ШТ</p>
+          <div class="product-rating">
+            <div class="stars">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+            </div>
+            <span class="rating-count">100</span>
+          </div>
+          <div class="product-bottom">
+            <span class="product-tag">Новые вещи для пупства</span>
+            <button class="cart-btn"><img src="images/cart.png" alt="В корзину"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image extra-tall">
+          <img src="images/book.png" alt="Книга отзывов">
+        </div>
+        <div class="product-info">
+          <p class="product-title">Книга Отзывов о Дашке, Издание...</p>
+          <p class="product-status"><span class="orange">Бестселлер</span> в товары для ПРЛ</p>
+          <div class="product-rating">
+            <div class="stars">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+              <img src="images/star.png" alt="★">
+            </div>
+            <span class="rating-count">358</span>
+          </div>
+          <div class="product-bottom">
+            <span class="product-tag">эксклюзив только здесь</span>
+            <button class="cart-btn"><img src="images/cart.png" alt="В корзину"></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="ТЕМКА" class="footer-logo-img">
+      </div>
+      <div class="footer-contacts">
+        <p>Contacts:</p>
+        <p>Sergey@come-to.me</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
