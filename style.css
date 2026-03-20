@@ -283,3 +283,62 @@ span.orange {
   text-align: right;
   line-height: 1.6;
 }
+
+/* Кликабельные элементы */
+.clickable {
+  cursor: pointer;
+}
+
+/* Поп-ап */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup {
+  background: #f5e6d3;
+  border-radius: 24px;
+  padding: 40px 30px 35px;
+  max-width: 340px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+.popup-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.popup-text {
+  font-size: 16px;
+  color: #000;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.popup-btn {
+  background: #fb7701;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 36px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}

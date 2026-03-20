@@ -45,8 +45,8 @@
     <div class="products">
 
       <!-- Ряд 1 -->
-      <div class="product-card">
-        <div class="product-image">
+      <div class="product-card" data-popup="sport">
+        <div class="product-image clickable">
           <img src="images/mfr.jpg" alt="МФР">
         </div>
         <div class="product-info">
@@ -64,13 +64,13 @@
           </div>
           <div class="product-bottom">
             <span class="product-tag">экстра экономия 100%</span>
-            <button class="cart-btn"><img src="images/cart.svg" alt="В корзину"></button>
+            <button class="cart-btn clickable"><img src="images/cart.svg" alt="В корзину"></button>
           </div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="product-image">
+      <div class="product-card" data-popup="dishes">
+        <div class="product-image clickable">
           <img src="images/dishes.jpg" alt="Посуда">
         </div>
         <div class="product-info">
@@ -88,14 +88,14 @@
           </div>
           <div class="product-bottom">
             <span class="product-tag">самый необычный это</span>
-            <button class="cart-btn"><img src="images/cart.svg" alt="В корзину"></button>
+            <button class="cart-btn clickable"><img src="images/cart.svg" alt="В корзину"></button>
           </div>
         </div>
       </div>
 
       <!-- Ряд 2 -->
-      <div class="product-card">
-        <div class="product-image tall">
+      <div class="product-card" data-popup="vocal">
+        <div class="product-image tall clickable">
           <img src="images/vocal.jpg" alt="Вокал">
         </div>
         <div class="product-info">
@@ -113,13 +113,13 @@
           </div>
           <div class="product-bottom">
             <span class="product-tag">в подарок от близких</span>
-            <button class="cart-btn"><img src="images/cart.svg" alt="В корзину"></button>
+            <button class="cart-btn clickable"><img src="images/cart.svg" alt="В корзину"></button>
           </div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="product-image tall">
+      <div class="product-card" data-popup="fireplace">
+        <div class="product-image tall clickable">
           <img src="images/fireplace.jpg" alt="Камин">
         </div>
         <div class="product-info">
@@ -137,14 +137,14 @@
           </div>
           <div class="product-bottom">
             <span class="product-tag">100% на добрые дела</span>
-            <button class="cart-btn"><img src="images/cart.svg" alt="В корзину"></button>
+            <button class="cart-btn clickable"><img src="images/cart.svg" alt="В корзину"></button>
           </div>
         </div>
       </div>
 
       <!-- Ряд 3 -->
-      <div class="product-card">
-        <div class="product-image extra-tall">
+      <div class="product-card" data-popup="puppet">
+        <div class="product-image extra-tall clickable">
           <img src="images/puppet.jpg" alt="Пупенка">
         </div>
         <div class="product-info">
@@ -162,13 +162,13 @@
           </div>
           <div class="product-bottom">
             <span class="product-tag">Новые вещи для пупства</span>
-            <button class="cart-btn"><img src="images/cart.svg" alt="В корзину"></button>
+            <button class="cart-btn clickable"><img src="images/cart.svg" alt="В корзину"></button>
           </div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="product-image extra-tall">
+      <div class="product-card" data-popup="book">
+        <div class="product-image extra-tall clickable">
           <img src="images/book.jpg" alt="Книга отзывов">
         </div>
         <div class="product-info">
@@ -186,7 +186,7 @@
           </div>
           <div class="product-bottom">
             <span class="product-tag">эксклюзив только здесь</span>
-            <button class="cart-btn"><img src="images/cart.svg" alt="В корзину"></button>
+            <button class="cart-btn clickable"><img src="images/cart.svg" alt="В корзину"></button>
           </div>
         </div>
       </div>
@@ -205,5 +205,54 @@
     </footer>
 
   </div>
+
+  <!-- Поп-апы -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <h2 class="popup-title">Спасибо,<br>что ты есть!</h2>
+      <p class="popup-text" id="popupText"></p>
+      <button class="popup-btn" id="popupClose">Выбирать дальше</button>
+    </div>
+  </div>
+
+  <script>
+    const popupTexts = {
+      sport: 'Заказ доставлен\nна ПВЗ <b>Где мои гантели</b>',
+      dishes: 'Заказ доставлен\nна ПВЗ <b>Ящик, где тёрка</b>',
+      vocal: 'Заказ доставлен\nна ПВЗ <b>Второй этаж</b>',
+      fireplace: 'Заказ доставлен\nна ПВЗ <b>Ящик с косметикой</b>',
+      puppet: 'Заказ доставлен\nна ПВЗ <b>Где твои вещи все</b>',
+      book: 'Заказ выдается в электронном\nвиде. Пишите на почту <b>СкажиСереже@скинь.мне</b>'
+    };
+
+    const overlay = document.getElementById('popupOverlay');
+    const popupText = document.getElementById('popupText');
+    const popupClose = document.getElementById('popupClose');
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      const popupId = card.dataset.popup;
+
+      card.querySelector('.product-image').addEventListener('click', () => {
+        popupText.innerHTML = popupTexts[popupId].replace(/\n/g, '<br>');
+        overlay.classList.add('active');
+      });
+
+      card.querySelector('.cart-btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        popupText.innerHTML = popupTexts[popupId].replace(/\n/g, '<br>');
+        overlay.classList.add('active');
+      });
+    });
+
+    popupClose.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
