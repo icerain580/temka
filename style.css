@@ -34,14 +34,16 @@ body {
 
 .header-logo {
   flex-shrink: 0;
-  width: 80px;
+  width: 50px;
+  height: 50px;
 }
 
 .header-logo-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  margin-left: -16px;
+  border-radius: 10px;
 }
 
 .header-icons {
@@ -258,12 +260,15 @@ span.orange {
 }
 
 .footer-logo {
-  width: 67px;
+  width: 40px;
+  height: 40px;
 }
 
 .footer-logo-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .footer-contacts {
